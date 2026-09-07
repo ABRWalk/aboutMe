@@ -1,601 +1,544 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Портфолио Егора Максимовича — frontend-разработчика и верстальщика. Работы, навыки, опыт и контакты.">
-    <meta name="author" content="Егор Максимович">
-    <title>Егор Максимович — Frontend-разработчик</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Егор Максимович - Мое Портфолио</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #495057;
+            background-color: #f4f6f8;
+        }
+
+        .my-navbar {
+            background-color: #0d1b2a;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .my-navbar a {
+            color: white !important;
+        }
+
+        .my-navbar a:hover {
+            color: #3fa7c4 !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(180deg, #0d1b2a 0%, #1b263b 100%);
+            color: white;
+            padding-top: 150px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+
+        .badge-custom {
+            background-color: rgba(63, 167, 196, 0.2);
+            color: #3fa7c4;
+            border: 1px solid #3fa7c4;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .blue-text {
+            color: #3fa7c4;
+        }
+
+        .btn-custom-blue {
+            background-color: #3fa7c4;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            border: none;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-custom-blue:hover {
+            background-color: #2d7788;
+            color: white;
+        }
+
+        .btn-custom-outline {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-custom-outline:hover {
+            background-color: white;
+            color: #0d1b2a;
+        }
+
+        .section-padding {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .white-bg {
+            background-color: white;
+        }
+
+        .my-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .my-card:hover {
+            margin-top: -5px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #e2f2f7;
+            color: #3fa7c4;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 24px;
+            margin: 0 auto 15px auto;
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .portfolio-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            height: 100%;
+        }
+
+        .timeline-simple {
+            border-left: 3px solid #3fa7c4;
+            padding-left: 20px;
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-date {
+            background-color: #e2f2f7;
+            color: #1f6479;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            float: right;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .contacts-bg {
+            background-color: #0d1b2a;
+            color: white;
+        }
+
+        .social-circle {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 45px;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .social-circle:hover {
+            background-color: #3fa7c4;
+            color: white;
+        }
+
+        .footer-block {
+            background-color: #0a1520;
+            color: gray;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        input.form-control, textarea.form-control {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="0px 0px -40%" tabindex="0">
+<body>
 
-    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg my-navbar fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-semibold" href="#home">
-                <i class="bi bi-code-slash me-2 text-info"></i>Егор Максимович
+            <a class="navbar-brand fw-bold" style="color: white;" href="#home">
+                <i class="bi bi-code-slash blue-text"></i> Егор Максимович
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false"
-                    aria-label="Открыть меню навигации">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" style="background-color: white;">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Обо мне</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Навыки</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Портфолио</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Опыт</a></li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <a class="nav-link btn btn-outline-light btn-sm px-3" href="#contacts">Связаться</a>
+                    <li class="nav-item" style="margin-left: 15px;">
+                        <a class="nav-link btn-custom-outline py-1 px-3 mt-1" href="#contacts">Связаться</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header id="home" class="hero text-white text-center d-flex align-items-center">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <span class="badge rounded-pill bg-info bg-opacity-10 text-info border border-info border-opacity-25 mb-4 px-3 py-2 fw-medium">
-                        <i class="bi bi-circle-fill me-2 small"></i>Открыт для новых проектов
-                    </span>
-                    <h1 class="display-3 fw-bold mb-3">Егор Максимович</h1>
-                    <p class="fs-4 text-info mb-3">Веб-разработчик</p>
-                    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 640px;">
-                        Превращаю макеты в быстрые, доступные и по-настоящему адаптивные интерфейсы —
-                        чистый код без лишнего шума.
-                    </p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                        <a href="#portfolio" class="btn btn-info btn-lg px-4 fw-semibold">
-                            <i class="bi bi-collection me-2"></i>Мои работы
-                        </a>
-                        <a href="#contacts" class="btn btn-outline-light btn-lg px-4">
-                            <i class="bi bi-envelope me-2"></i>Написать мне
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section id="about" class="py-5 py-lg-6 bg-white">
-            <div class="container">
-                <div class="row align-items-center g-4 g-xl-5">
-
-                    <div class="col-lg-5">
-                        <img src="https://i.pinimg.com/736x/55/77/ee/5577ee35dc553d9fc86bca95b3a101f6.jpg"
-                             class="img-fluid rounded-4 shadow-sm w-100">
-                    </div>
-
-                    <div class="col-lg-7">
-                        <p class="text-uppercase text-info fw-semibold small letter-spacing mb-2">Обо мне</p>
-                        <h2 class="h1 fw-bold text-dark-navy mb-4">Дизайн, который работает в браузере</h2>
-                        <p class="text-secondary mb-3">
-                            Меня зовут Егор, и последние двести лет я занимаюсь веб-разработкой: от простых
-                            лендингов до личных кабинетов с десятками экранов. Начинал никак просто 
-                            прикола ради начал, сегодня веду клиентскую часть продуктов целиком —
-                            от архитектуры компонентов до релиза.
-                        </p>
-                        <p class="text-secondary mb-4">
-                            Люблю аккуратную типографику, семантическую разметку и интерфейсы, которыми
-                            одинаково удобно пользоваться с ноутбука и с телефона в метро. Считаю, что
-                            хороший сайт — это тот, о котором пользователь вообще не думает.
-                        </p>
-
-                        <div class="row g-3 mb-4">
-                            <div class="col-6 col-md-3">
-                                <div class="border-start border-info border-3 ps-3">
-                                    <div class="h3 fw-bold text-dark-navy mb-0">200+</div>
-                                    <small class="text-secondary">лет опыта</small>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="border-start border-info border-3 ps-3">
-                                    <div class="h3 fw-bold text-dark-navy mb-0">600+</div>
-                                    <small class="text-secondary">проектов</small>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="border-start border-info border-3 ps-3">
-                                    <div class="h3 fw-bold text-dark-navy mb-0">800</div>
-                                    <small class="text-secondary">клиентов</small>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="border-start border-info border-3 ps-3">
-                                    <div class="h3 fw-bold text-dark-navy mb-0">100</div>
-                                    <small class="text-secondary">баллов Lighthouse</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <ul class="list-unstyled text-secondary mb-0">
-                            <li class="mb-2"><i class="bi bi-geo-alt-fill text-info me-2"></i>Каракумы · удалённо по всему миру</li>
-                            <li class="mb-2"><i class="bi bi-translate text-info me-2"></i>Русский — родной, английский — не знаю</li>
-                            <li><i class="bi bi-mortarboard-fill text-info me-2"></i>Где то учился</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="py-5 py-lg-6 bg-light-gray">
-            <div class="container">
-
-                <div class="row justify-content-center text-center mb-5">
-                    <div class="col-lg-7">
-                        <p class="text-uppercase text-info fw-semibold small letter-spacing mb-2">Навыки</p>
-                        <h2 class="h1 fw-bold text-dark-navy mb-3">Чем я владею</h2>
-                        <p class="text-secondary mb-0">
-                            Инструменты, с которыми работаю каждый день — и за качество которых готов отвечать.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm card-hover text-center p-2">
-                            <div class="card-body">
-                                <div class="skill-icon mx-auto mb-3"><i class="bi bi-filetype-html"></i></div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">HTML5 &amp; семантика</h3>
-                                <p class="card-text text-secondary small mb-0">
-                                    Валидная разметка, микроразметка Schema.org, доступность и ARIA.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm card-hover text-center p-2">
-                            <div class="card-body">
-                                <div class="skill-icon mx-auto mb-3"><i class="bi bi-filetype-css"></i></div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">CSS3 &amp; Sass</h3>
-                                <p class="card-text text-secondary small mb-0">
-                                    Flexbox, Grid, анимации, БЭМ-методология и кастомные свойства.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm card-hover text-center p-2">
-                            <div class="card-body">
-                                <div class="skill-icon mx-auto mb-3"><i class="bi bi-filetype-js"></i></div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">JavaScript ES6+</h3>
-                                <p class="card-text text-secondary small mb-0">
-                                    Модули, асинхронность, работа с DOM и REST API без лишних библиотек.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm card-hover text-center p-2">
-                            <div class="card-body">
-                                <div class="skill-icon mx-auto mb-3"><i class="bi bi-bootstrap"></i></div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">Bootstrap 5</h3>
-                                <p class="card-text text-secondary small mb-0">
-                                    Быстрая сборка интерфейсов и кастомизация тем через Sass-переменные.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm card-hover text-center p-2">
-                            <div class="card-body">
-                                <div class="skill-icon mx-auto mb-3"><i class="bi bi-hexagon"></i></div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">React</h3>
-                                <p class="card-text text-secondary small mb-0">
-                                    Хуки, компонентный подход, роутинг и управление состоянием.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm card-hover text-center p-2">
-                            <div class="card-body">
-                                <div class="skill-icon mx-auto mb-3"><i class="bi bi-git"></i></div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">Git &amp; GitHub</h3>
-                                <p class="card-text text-secondary small mb-0">
-                                    Ветвление, code review, pull requests и настройка CI/CD.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm card-hover text-center p-2">
-                            <div class="card-body">
-                                <div class="skill-icon mx-auto mb-3"><i class="bi bi-phone"></i></div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">Адаптивная вёрстка</h3>
-                                <p class="card-text text-secondary small mb-0">
-                                    Mobile-first, кроссбраузерность и оптимизация Core Web Vitals.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card h-100 border-0 shadow-sm card-hover text-center p-2">
-                            <div class="card-body">
-                                <div class="skill-icon mx-auto mb-3"><i class="bi bi-palette"></i></div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">Figma</h3>
-                                <p class="card-text text-secondary small mb-0">
-                                    Работа с макетами, дизайн-системами и авто-лейаутом.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="py-5 py-lg-6 bg-white">
-            <div class="container">
-
-                <div class="row justify-content-center text-center mb-5">
-                    <div class="col-lg-7">
-                        <p class="text-uppercase text-info fw-semibold small letter-spacing mb-2">Портфолио</p>
-                        <h2 class="h1 fw-bold text-dark-navy mb-3">Избранные работы</h2>
-                        <p class="text-secondary mb-0">
-                            Четыре проекта, которые лучше всего показывают мой подход к вёрстке и интерфейсам.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-
-                    <div class="col">
-                        <article class="card h-100 border-0 shadow-sm card-hover overflow-hidden">
-                            <img src="https://placehold.co/800x500/0d1b2a/64d2e8?text=Aurora+Shop"
-                                 class="card-img-top" alt="Скриншот интернет-магазина Aurora Shop">
-                            <div class="card-body p-4">
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-secondary">HTML</span>
-                                    <span class="badge text-bg-secondary">Sass</span>
-                                    <span class="badge text-bg-secondary">JS</span>
-                                </div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">Aurora Shop — интернет-магазин</h3>
-                                <p class="card-text text-secondary">
-                                    Каталог на 500+ товаров с фильтрами, корзиной и избранным.
-                                    Полностью адаптивная сетка и ленивая загрузка изображений.
-                                </p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 px-4 pb-4 pt-0">
-                                <a href="#" class="link-info text-decoration-none fw-medium">
-                                    Смотреть проект <i class="bi bi-arrow-right ms-1"></i>
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card h-100 border-0 shadow-sm card-hover overflow-hidden">
-                            <img src="https://placehold.co/800x500/1b263b/64d2e8?text=Finlytics"
-                                 class="card-img-top" alt="Скриншот дашборда Finlytics">
-                            <div class="card-body p-4">
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-secondary">React</span>
-                                    <span class="badge text-bg-secondary">Bootstrap</span>
-                                    <span class="badge text-bg-secondary">Chart.js</span>
-                                </div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">Finlytics — аналитический дашборд</h3>
-                                <p class="card-text text-secondary">
-                                    Панель финансовой аналитики с графиками в реальном времени,
-                                    тёмной темой и экспортом отчётов в PDF.
-                                </p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 px-4 pb-4 pt-0">
-                                <a href="#" class="link-info text-decoration-none fw-medium">
-                                    Смотреть проект <i class="bi bi-arrow-right ms-1"></i>
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card h-100 border-0 shadow-sm card-hover overflow-hidden">
-                            <img src="https://placehold.co/800x500/415a77/e0e1dd?text=Northline"
-                                 class="card-img-top" alt="Скриншот корпоративного сайта Northline">
-                            <div class="card-body p-4">
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-secondary">Вёрстка</span>
-                                    <span class="badge text-bg-secondary">SEO</span>
-                                    <span class="badge text-bg-secondary">A11y</span>
-                                </div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">Northline — корпоративный сайт</h3>
-                                <p class="card-text text-secondary">
-                                    Многостраничный сайт логистической компании: 100 баллов
-                                    в Lighthouse и полная поддержка клавиатурной навигации.
-                                </p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 px-4 pb-4 pt-0">
-                                <a href="#" class="link-info text-decoration-none fw-medium">
-                                    Смотреть проект <i class="bi bi-arrow-right ms-1"></i>
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col">
-                        <article class="card h-100 border-0 shadow-sm card-hover overflow-hidden">
-                            <img src="https://placehold.co/800x500/778da9/0d1b2a?text=Kindly+App"
-                                 class="card-img-top" alt="Скриншот мобильного приложения Kindly">
-                            <div class="card-body p-4">
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-secondary">Figma</span>
-                                    <span class="badge text-bg-secondary">PWA</span>
-                                    <span class="badge text-bg-secondary">CSS Grid</span>
-                                </div>
-                                <h3 class="h5 card-title fw-semibold text-dark-navy">Kindly — трекер привычек</h3>
-                                <p class="card-text text-secondary">
-                                    Progressive Web App с офлайн-режимом, push-уведомлениями
-                                    и анимированной статистикой прогресса.
-                                </p>
-                            </div>
-                            <div class="card-footer bg-transparent border-0 px-4 pb-4 pt-0">
-                                <a href="#" class="link-info text-decoration-none fw-medium">
-                                    Смотреть проект <i class="bi bi-arrow-right ms-1"></i>
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="py-5 py-lg-6 bg-light-gray">
-            <div class="container">
-
-                <div class="row justify-content-center text-center mb-5">
-                    <div class="col-lg-7">
-                        <p class="text-uppercase text-info fw-semibold small letter-spacing mb-2">Карьера</p>
-                        <h2 class="h1 fw-bold text-dark-navy mb-3">Опыт работы</h2>
-                        <p class="text-secondary mb-0">Путь от вёрстки лендингов до ведения фронтенда продукта.</p>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-9">
-                        <ul class="timeline list-unstyled mb-0">
-
-                            <li class="timeline-item">
-                                <div class="card border-0 shadow-sm">
-                                    <div class="card-body p-4">
-                                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2 mb-2">
-                                            <h3 class="h5 fw-semibold text-dark-navy mb-0">Senior Frontend-разработчик (я это выдумал)</h3>
-                                            <span class="badge bg-info-subtle text-info-emphasis rounded-pill px-3 py-2">2077 — наст. время</span>
-                                        </div>
-                                        <p class="text-info fw-medium mb-2">
-                                            <i class="bi bi-building me-1"></i>Ya ne Znau comp., Каракумы
-                                        </p>
-                                        <p class="text-secondary mb-0">
-                                            Веду клиентскую часть SaaS-платформы: спроектировала дизайн-систему
-                                            на 60+ компонентов, сократила время сборки вдвое и наставляю двух джуниоров. (это тоже)
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="timeline-item">
-                                <div class="card border-0 shadow-sm">
-                                    <div class="card-body p-4">
-                                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2 mb-2">
-                                            <h3 class="h5 fw-semibold text-dark-navy mb-0">Frontend-разработчик</h3>
-                                            <span class="badge bg-info-subtle text-info-emphasis rounded-pill px-3 py-2">2071 - 2077</span>
-                                        </div>
-                                        <p class="text-info fw-medium mb-2">
-                                            <i class="bi bi-building me-1"></i>Некторая студия, Каракумы
-                                        </p>
-                                        <p class="text-secondary mb-0">
-                                            Разработал более 25 сайтов для клиентов из e-commerce и медицины.
-                                            Внедрил общий стартовый шаблон, ускоривший старт проектов на неделю.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="timeline-item">
-                                <div class="card border-0 shadow-sm">
-                                    <div class="card-body p-4">
-                                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2 mb-2">
-                                            <h3 class="h5 fw-semibold text-dark-navy mb-0">Верстальщик</h3>
-                                            <span class="badge bg-info-subtle text-info-emphasis rounded-pill px-3 py-2">2070 - 2077</span>
-                                        </div>
-                                        <p class="text-info fw-medium mb-2">
-                                            <i class="bi bi-laptop me-1"></i>Фриланс
-                                        </p>
-                                        <p class="text-secondary mb-0">
-                                            Адаптивная вёрстка лендингов и email-рассылок по макетам Figma.
-                                            Работал напрямую с заказчиками: от брифа до публикации на хостинге.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="timeline-item">
-                                <div class="card border-0 shadow-sm">
-                                    <div class="card-body p-4">
-                                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2 mb-2">
-                                            <h3 class="h5 fw-semibold text-dark-navy mb-0">Закончил некий факультет IT</h3>
-                                            <span class="badge bg-info-subtle text-info-emphasis rounded-pill px-3 py-2">2060 - 2070</span>
-                                        </div>
-                                        <p class="text-info fw-medium mb-2">
-                                            <i class="bi bi-mortarboard me-1"></i>Какое-то учебное заведение
-                                        </p>
-                                        <p class="text-secondary mb-0">
-                                            Диплом с отличием. Некоторая дипломная работа по
-                                            по которой я разумеется получил отлично.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacts" class="py-5 py-lg-6 bg-dark-navy text-white">
-            <div class="container">
-
-                <div class="row justify-content-center text-center mb-5">
-                    <div class="col-lg-7">
-                        <p class="text-uppercase text-info fw-semibold small letter-spacing mb-2">Контакты</p>
-                        <h2 class="h1 fw-bold mb-3">Давайте поработаем вместе</h2>
-                        <p class="text-white-50 mb-0">
-                            Расскажите о задаче — отвечу в течение одного рабочего дня.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row g-4 g-xl-5 align-items-start">
-
-                    <div class="col-lg-5">
-                        <h3 class="h4 fw-semibold mb-4">Прямая связь</h3>
-
-                        <ul class="list-unstyled mb-5">
-                            <li class="d-flex align-items-center mb-3">
-                                <span class="contact-icon me-3"><i class="bi bi-envelope-fill"></i></span>
-                                <div>
-                                    <div class="small text-white-50">Email</div>
-                                    <a href="mailto:hello@maksomovich.dev" class="link-light text-decoration-none">hello@maksomovich.dev</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <span class="contact-icon me-3"><i class="bi bi-telephone-fill"></i></span>
-                                <div>
-                                    <div class="small text-white-50">Телефон</div>
-                                    <a href="tel:+79001234567" class="link-light text-decoration-none">+7 (900) 123-45-67</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <span class="contact-icon me-3"><i class="bi bi-geo-alt-fill"></i></span>
-                                <div>
-                                    <div class="small text-white-50">Локация</div>
-                                    <span class="text-white">Каракумы · удалённый формат</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <h3 class="h4 fw-semibold mb-3">Социальные сети</h3>
-                        <div class="d-flex flex-wrap gap-3">
-                            <a href="#" class="social-link" aria-label="GitHub" title="GitHub"><i class="bi bi-github"></i></a>
-                            <a href="#" class="social-link" aria-label="Telegram" title="Telegram"><i class="bi bi-telegram"></i></a>
-                            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" class="social-link" aria-label="Behance" title="Behance"><i class="bi bi-behance"></i></a>
-                            <a href="#" class="social-link" aria-label="Dribbble" title="Dribbble"><i class="bi bi-dribbble"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7">
-                        <div class="card border-0 shadow">
-                            <div class="card-body p-4 p-md-5">
-                                <form class="needs-validation" novalidate>
-                                    <div class="row g-3">
-
-                                        <div class="col-md-6">
-                                            <label for="name" class="form-label text-dark-navy fw-medium">Имя</label>
-                                            <input type="text" class="form-control form-control-lg" id="name"
-                                                   name="name" placeholder="Иван Иваныч"
-                                                   required minlength="2" maxlength="60">
-                                            <div class="invalid-feedback">Пожалуйста, укажите имя (минимум 2 символа).</div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="email" class="form-label text-dark-navy fw-medium">Email</label>
-                                            <input type="email" class="form-control form-control-lg" id="email"
-                                                   name="email" placeholder="you@example.com" required>
-                                            <div class="invalid-feedback">Введите корректный адрес электронной почты.</div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <label for="subject" class="form-label text-dark-navy fw-medium">Тема</label>
-                                            <input type="text" class="form-control form-control-lg" id="subject"
-                                                   name="subject" placeholder="Например: вёрстка лендинга">
-                                        </div>
-
-                                        <div class="col-12">
-                                            <label for="message" class="form-label text-dark-navy fw-medium">Сообщение</label>
-                                            <textarea class="form-control" id="message" name="message" rows="5"
-                                                      placeholder="Опишите задачу, сроки и бюджет…"
-                                                      required minlength="10"></textarea>
-                                            <div class="invalid-feedback">Напишите хотя бы пару предложений о задаче.</div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="privacy" required>
-                                                <label class="form-check-label text-secondary small" for="privacy">
-                                                    Согласен(на) на обработку персональных данных
-                                                </label>
-                                                <div class="invalid-feedback">Без согласия отправить форму не получится.</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12 d-grid d-sm-block">
-                                            <button type="submit" class="btn btn-info btn-lg px-4 fw-semibold">
-                                                <i class="bi bi-send me-2"></i>Отправить сообщение
-                                            </button>
-                                        </div>
-
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-dark text-white-50 py-4 border-top border-secondary border-opacity-25">
+    <div id="home" class="hero-section">
         <div class="container">
-            <div class="row align-items-center g-3 text-center text-md-start">
-                <div class="col-md-6">
-                    <p class="mb-0 small">&copy; 2026 Егор Максимович. Все права защищены.</p>
+            <div class="badge-custom">
+                <i class="bi bi-circle-fill" style="font-size: 10px; margin-right: 5px;"></i> Открыт для новых проектов
+            </div>
+            <h1 style="font-size: 48px; font-weight: bold;">Егор Максимович</h1>
+            <h3 class="blue-text" style="margin-bottom: 30px;">Веб-разработчик</h3>
+            
+            <p style="color: #ccc; max-width: 600px; margin: 0 auto;">
+                Превращаю макеты в быстрые, доступные и по-настоящему адаптивные интерфейсы —
+                чистый код без лишнего шума.
+            </p>
+            
+            <br><br>
+            
+            <div>
+                <a href="#portfolio" class="btn-custom-blue" style="margin-right: 15px;">Мои работы</a>
+                <a href="#contacts" class="btn-custom-outline">Написать мне</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="section-padding white-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="https://i.pinimg.com/736x/55/77/ee/5577ee35dc553d9fc86bca95b3a101f6.jpg" style="width: 100%; border-radius: 15px;" alt="Мое фото">
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-0 small">
-                        Свёрстано вручную на <i class="bi bi-bootstrap-fill text-info"></i> Bootstrap 5
+                <div class="col-md-7" style="padding-top: 20px;">
+                    <b class="blue-text">ОБО МНЕ</b>
+                    <h2 style="font-weight: bold; margin-top: 10px; margin-bottom: 20px;">Дизайн, который работает в браузере</h2>
+                    <p style="color: #666;">
+                        Меня зовут Егор, и последние двести лет я занимаюсь веб-разработкой: от простых
+                        лендингов до личных кабинетов с десятками экранов. Начинал никак просто 
+                        прикола ради начал, сегодня веду клиентскую часть продуктов целиком —
+                        от архитектуры компонентов до релиза.
                     </p>
+                    <p style="color: #666;">
+                        Люблю аккуратную типографику, семантическую разметку и интерфейсы, которыми
+                        одинаково удобно пользоваться с ноутбука и с телефона в метро. Считаю, что
+                        хороший сайт — это тот, о котором пользователь вообще не думает.
+                    </p>
+
+                    <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+                        <div class="col-6 col-md-3">
+                            <h3 style="color: #0d1b2a; border-left: 2px solid #3fa7c4; padding-left: 10px;">200+</h3>
+                            <p style="font-size: 14px; color: gray;">лет опыта</p>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h3 style="color: #0d1b2a; border-left: 2px solid #3fa7c4; padding-left: 10px;">600+</h3>
+                            <p style="font-size: 14px; color: gray;">проектов</p>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h3 style="color: #0d1b2a; border-left: 2px solid #3fa7c4; padding-left: 10px;">800</h3>
+                            <p style="font-size: 14px; color: gray;">клиентов</p>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h3 style="color: #0d1b2a; border-left: 2px solid #3fa7c4; padding-left: 10px;">100</h3>
+                            <p style="font-size: 14px; color: gray;">баллов Lighthouse</p>
+                        </div>
+                    </div>
+
+                    <ul style="list-style-type: none; padding-left: 0; color: #666;">
+                        <li><i class="bi bi-geo-alt-fill blue-text"></i> Каракумы · удалённо по всему миру</li>
+                        <li style="margin-top: 10px;"><i class="bi bi-translate blue-text"></i> Русский — родной, английский — не знаю</li>
+                        <li style="margin-top: 10px;"><i class="bi bi-mortarboard-fill blue-text"></i> Где то учился</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div id="skills" class="section-padding" style="background-color: #f4f6f8;">
+        <div class="container text-center">
+            <b class="blue-text">НАВЫКИ</b>
+            <h2 style="font-weight: bold; margin-bottom: 40px;">Чем я владею</h2>
+            
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="my-card">
+                        <div class="icon-circle"><i class="bi bi-filetype-html"></i></div>
+                        <h5>HTML5 & семантика</h5>
+                        <p style="font-size: 13px; color: gray;">Валидная разметка, микроразметка Schema.org, доступность.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="my-card">
+                        <div class="icon-circle"><i class="bi bi-filetype-css"></i></div>
+                        <h5>CSS3 & Sass</h5>
+                        <p style="font-size: 13px; color: gray;">Flexbox, Grid, анимации, БЭМ-методология.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="my-card">
+                        <div class="icon-circle"><i class="bi bi-filetype-js"></i></div>
+                        <h5>JavaScript ES6+</h5>
+                        <p style="font-size: 13px; color: gray;">Модули, асинхронность, работа с DOM и REST API.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="my-card">
+                        <div class="icon-circle"><i class="bi bi-bootstrap"></i></div>
+                        <h5>Bootstrap 5</h5>
+                        <p style="font-size: 13px; color: gray;">Быстрая сборка интерфейсов и кастомизация.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="my-card">
+                        <div class="icon-circle"><i class="bi bi-hexagon"></i></div>
+                        <h5>React</h5>
+                        <p style="font-size: 13px; color: gray;">Хуки, компонентный подход, роутинг.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="my-card">
+                        <div class="icon-circle"><i class="bi bi-git"></i></div>
+                        <h5>Git & GitHub</h5>
+                        <p style="font-size: 13px; color: gray;">Ветвление, code review, pull requests.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="my-card">
+                        <div class="icon-circle"><i class="bi bi-phone"></i></div>
+                        <h5>Адаптивная вёрстка</h5>
+                        <p style="font-size: 13px; color: gray;">Mobile-first, кроссбраузерность.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="my-card">
+                        <div class="icon-circle"><i class="bi bi-palette"></i></div>
+                        <h5>Figma</h5>
+                        <p style="font-size: 13px; color: gray;">Работа с макетами, дизайн-системами.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        document.querySelectorAll('.needs-validation').forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    </script>
+    <div id="portfolio" class="section-padding white-bg">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 40px;">
+                <b class="blue-text">ПОРТФОЛИО</b>
+                <h2 style="font-weight: bold;">Избранные работы</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <img src="https://placehold.co/800x500/0d1b2a/64d2e8?text=Aurora+Shop" class="portfolio-img" alt="Сайт 1">
+                        <div style="padding: 20px;">
+                            <span style="background: #eee; padding: 3px 8px; font-size: 12px; border-radius: 3px;">HTML</span>
+                            <span style="background: #eee; padding: 3px 8px; font-size: 12px; border-radius: 3px;">Sass</span>
+                            <span style="background: #eee; padding: 3px 8px; font-size: 12px; border-radius: 3px;">JS</span>
+                            
+                            <h4 style="margin-top: 15px;">Aurora Shop — интернет-магазин</h4>
+                            <p style="color: gray; font-size: 14px;">Каталог на 500+ товаров с фильтрами, корзиной и избранным. Полностью адаптивная сетка.</p>
+                            <a href="#" class="blue-text" style="text-decoration: none; font-weight: bold;">Смотреть проект -></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <img src="https://placehold.co/800x500/1b263b/64d2e8?text=Finlytics" class="portfolio-img" alt="Сайт 2">
+                        <div style="padding: 20px;">
+                            <span style="background: #eee; padding: 3px 8px; font-size: 12px; border-radius: 3px;">React</span>
+                            <span style="background: #eee; padding: 3px 8px; font-size: 12px; border-radius: 3px;">Bootstrap</span>
+                            
+                            <h4 style="margin-top: 15px;">Finlytics — аналитический дашборд</h4>
+                            <p style="color: gray; font-size: 14px;">Панель финансовой аналитики с графиками в реальном времени, тёмной темой и экспортом отчётов.</p>
+                            <a href="#" class="blue-text" style="text-decoration: none; font-weight: bold;">Смотреть проект -></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <img src="https://placehold.co/800x500/415a77/e0e1dd?text=Northline" class="portfolio-img" alt="Сайт 3">
+                        <div style="padding: 20px;">
+                            <span style="background: #eee; padding: 3px 8px; font-size: 12px; border-radius: 3px;">Вёрстка</span>
+                            
+                            <h4 style="margin-top: 15px;">Northline — корпоративный сайт</h4>
+                            <p style="color: gray; font-size: 14px;">Многостраничный сайт логистической компании: 100 баллов в Lighthouse.</p>
+                            <a href="#" class="blue-text" style="text-decoration: none; font-weight: bold;">Смотреть проект -></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-card">
+                        <img src="https://placehold.co/800x500/778da9/0d1b2a?text=Kindly+App" class="portfolio-img" alt="Сайт 4">
+                        <div style="padding: 20px;">
+                            <span style="background: #eee; padding: 3px 8px; font-size: 12px; border-radius: 3px;">PWA</span>
+                            <span style="background: #eee; padding: 3px 8px; font-size: 12px; border-radius: 3px;">CSS Grid</span>
+                            
+                            <h4 style="margin-top: 15px;">Kindly — трекер привычек</h4>
+                            <p style="color: gray; font-size: 14px;">Progressive Web App с офлайн-режимом и анимированной статистикой прогресса.</p>
+                            <a href="#" class="blue-text" style="text-decoration: none; font-weight: bold;">Смотреть проект -></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience" class="section-padding" style="background-color: #f4f6f8;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 40px;">
+                <b class="blue-text">КАРЬЕРА</b>
+                <h2 style="font-weight: bold;">Опыт работы</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    
+                    <div class="timeline-simple">
+                        <div class="timeline-date">2077 — наст. время</div>
+                        <h4>Senior Frontend-разработчик (я это выдумал)</h4>
+                        <p class="blue-text">Ya ne Znau comp., Каракумы</p>
+                        <p style="color: gray; font-size: 14px;">
+                            Веду клиентскую часть SaaS-платформы: спроектировала дизайн-систему
+                            на 60+ компонентов, сократила время сборки вдвое и наставляю двух джуниоров. (это тоже)
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="timeline-simple">
+                        <div class="timeline-date">2071 - 2077</div>
+                        <h4>Frontend-разработчик</h4>
+                        <p class="blue-text">Некторая студия, Каракумы</p>
+                        <p style="color: gray; font-size: 14px;">
+                            Разработал более 25 сайтов для клиентов из e-commerce и медицины.
+                            Внедрил общий стартовый шаблон, ускоривший старт проектов на неделю.
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="timeline-simple">
+                        <div class="timeline-date">2070 - 2077</div>
+                        <h4>Верстальщик</h4>
+                        <p class="blue-text">Фриланс</p>
+                        <p style="color: gray; font-size: 14px;">
+                            Адаптивная вёрстка лендингов и email-рассылок по макетам Figma.
+                            Работал напрямую с заказчиками: от брифа до публикации на хостинге.
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="timeline-simple">
+                        <div class="timeline-date">2060 - 2070</div>
+                        <h4>Закончил некий факультет IT</h4>
+                        <p class="blue-text">Какое-то учебное заведение</p>
+                        <p style="color: gray; font-size: 14px;">
+                            Диплом с отличием. Некоторая дипломная работа по
+                            по которой я разумеется получил отлично.
+                        </p>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contacts" class="section-padding contacts-bg">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <b class="blue-text">КОНТАКТЫ</b>
+                <h2 style="font-weight: bold;">Давайте поработаем вместе</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5 mb-5">
+                    <h4>Прямая связь</h4>
+                    <br>
+                    <p><i class="bi bi-envelope-fill blue-text"></i> hello@maksomovich.dev</p>
+                    <p><i class="bi bi-telephone-fill blue-text"></i> +7 (900) 123-45-67</p>
+                    <p><i class="bi bi-geo-alt-fill blue-text"></i> Каракумы · удалённый формат</p>
+                    
+                    <br>
+                    <h4>Социальные сети</h4>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="social-circle"><i class="bi bi-github"></i></a>
+                        <a href="#" class="social-circle"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="social-circle"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div style="background: white; padding: 30px; border-radius: 10px; color: black;">
+                        <form action="#" method="POST">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Имя</label>
+                                    <input type="text" class="form-control" placeholder="Иван Иваныч" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" placeholder="you@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <label>Тема</label>
+                            <input type="text" class="form-control" placeholder="Например: вёрстка лендинга">
+                            
+                            <label>Сообщение</label>
+                            <textarea class="form-control" rows="4" placeholder="Опишите задачу..." required></textarea>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <input type="checkbox" id="privacy" required>
+                                <label for="privacy" style="font-size: 13px; color: gray;">Согласен(на) на обработку данных</label>
+                            </div>
+                            
+                            <button type="submit" class="btn-custom-blue" style="width: 100%;">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-block text-center">
+        <div class="container">
+            <p style="margin: 0;">&copy; 2026 Егор Максимович. Все права защищены.</p>
+            <p style="margin: 0; font-size: 12px; margin-top: 5px;">Свёрстано вручную на Bootstrap 5</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   
 
 </body>
 </html>
